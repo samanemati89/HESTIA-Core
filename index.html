@@ -81,6 +81,65 @@
         .cta a:hover {
             background-color: #003f63;
         }
+        #data-catalog {
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        #data-catalog h2 {
+            color: #005b96;
+            margin-bottom: 20px;
+        }
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+        .catalog-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .catalog-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .catalog-item h3 {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #333;
+        }
+        .catalog-item p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .tags {
+            margin-top: 10px;
+        }
+        .tags span {
+            display: inline-block;
+            background: #005b96;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin: 2px;
+        }
+        #searchBar {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+            font-size: 1em;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -93,67 +152,62 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#team">Team</a>
+        <a href="#data-catalog">Data Catalog</a>
         <a href="#contact">Contact</a>
     </nav>
-    <!--
     <section id="about">
         <h2>About HESTIA</h2>
-        <p>HESTIA is a research initiative at the University of South Carolina designed to streamline clinical research data management. Collaborating with Prisma Health and other stakeholders, HESTIA focuses on acquiring, curating, and disseminating large datasets related to health sciences, public health, and business analytics.</p>
-        <p>Our mission is to leverage cutting-edge technology and data-driven insights to advance healthcare and improve outcomes for diverse populations.</p>
-    -->
-    <section id="about">
-    <h2>About HESTIA</h2>
-    <p>HESTIA (Health Evaluation Systems and Technological Informatics Archive) is a cutting-edge research initiative established by the University of South Carolina's Office of the Vice President for Research (VPR). Our mission is to leverage cutting-edge technology and data-driven insights to advance healthcare and improve outcomes for diverse populations.</p>
-    <p>By collaborating with healthcare providers, state agencies, health insurance providers, businesses, and other stakeholders, HESTIA enables secure, centralized databases that can be leveraged for research reliant on AI applications. These datasets span various fields, including health care, public health, business analytics, social sciences, and more, aiming to advance knowledge and improve outcomes for diverse populations.</p>
-</section>
-
-    
-   <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-        <li>Acquiring and curating large datasets from health care providers, state agencies, and businesses</li>
-        <li>Creating secure and centralized databases of anonymized data</li>
-        <li>Disseminating large datasets related to health sciences to support research powered by AI and predictive modeling</li>
-        <li>Supporting projects in health care, public health, and social sciences</li>
-        <li>Ensuring compliance with data privacy regulations and ethical research practices</li>
-    </ul>
-</section>
-
-     <section id="team">
-        <h2>Our Team</h2>
-        <div class="team">
-            <div class="team-member">
-                <img src="https://github.com/samanemati89/HESTIA-Core/blob/main/thumbnail_IMG_2534.jpg">
-                <h3>Samaneh Nemati</h3>
-                <p>HESTIA Core Manager</p>
+        <p>HESTIA is a cutting-edge research initiative established by the University of South Carolina's Office of the Vice President for Research (VPR). Our mission is to leverage cutting-edge technology and data-driven insights to advance healthcare and improve outcomes for diverse populations.</p>
+        <p>By collaborating with healthcare providers, state agencies, health insurance providers, businesses, and other stakeholders, HESTIA enables secure, centralized databases that can be leveraged for research reliant on AI applications. These datasets span various fields, including health care, public health, business analytics, social sciences, and more, aiming to advance knowledge and improve outcomes for diverse populations.</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Acquiring and curating large datasets from health care providers, state agencies, and businesses</li>
+            <li>Creating secure and centralized databases of anonymized data</li>
+            <li>Disseminating large datasets related to health sciences to support research powered by AI and predictive modeling</li>
+            <li>Supporting projects in health care, public health, and social sciences</li>
+            <li>Ensuring compliance with data privacy regulations and ethical research practices</li>
+        </ul>
+    </section>
+    <section id="data-catalog">
+        <h2>Data Catalog</h2>
+        <input type="text" id="searchBar" placeholder="Search datasets..." onkeyup="filterCatalog()">
+        <div class="catalog-grid" id="catalogGrid">
+            <div class="catalog-item">
+                <img src="https://via.placeholder.com/300x200" alt="Dataset 1">
+                <h3>LDEO-pCO2 HPD Back in Time</h3>
+                <p>The ocean reduces human impact on the climate by absorbing and sequestering CO2. From 1950s to the 1980s, observations of pCO2 and related ocean carbon variables were sparse and uncertain...</p>
+                <div class="tags">
+                    <span>Carbon</span>
+                    <span>Machine Learning</span>
+                    <span>Ocean</span>
+                    <span>Zarr</span>
+                </div>
             </div>
-            <!--
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Alex Ewing">
-                <h3>Alex Ewing</h3>
-                <p>Director, Prisma Health Data Support</p>
+            <div class="catalog-item">
+                <img src="https://via.placeholder.com/300x200" alt="Dataset 2">
+                <h3>ABC</h3>
+                <p>Here we should explain what ABC dataset is...</p>
+                <div class="tags">
+                    <span>bluh bluh</span>
+                    <span>OSN</span>
+                    <span>Brain</span>
+                    <span>Precipitation</span>
+                </div>
             </div>
-            -->
+            <div class="catalog-item">
+                <img src="https://via.placeholder.com/300x200" alt="Dataset 3">
+                <h3>XXX</h3>
+                <p>Here we should explain what XXX dataset is.</p>
+                <div class="tags">
+                    <span>Aging</span>
+                    <span>Research</span>
+                    <span>Json</span>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="cta">
-        <h2>Get Involved</h2>
-        <a href="mailto:snemati@mailbox.sc.edu">Contact Us</a>
-        <a href="https://github.com/samanemati89/HESTIA-Core" target="_blank">View on GitHub</a>
-    </section>
-    <!--
-    <section id="testimonials">
-        <h2>What People Say</h2>
-        <blockquote>
-            <p>"HESTIA Core revolutionized how we manage our clinical research data. The team is fantastic!"</p>
-            <cite>- Dr. Jane Doe, Prisma Health</cite>
-        </blockquote>
-        <blockquote>
-            <p>"Their innovative approach to data privacy and AI integration is unmatched."</p>
-            <cite>- Alex Ewing, Director of Data Support</cite>
-        </blockquote>
-    </section>
-    -->
     <footer>
         <p>© 2025 HESTIA Core | University of South Carolina</p>
         <p>
@@ -162,5 +216,24 @@
             <a href="https://github.com/samanemati89/HESTIA-Core" target="_blank">GitHub</a>
         </p>
     </footer>
+    <script>
+        function filterCatalog() {
+            const searchInput = document.getElementById("searchBar").value.toLowerCase();
+            const catalogItems = document.querySelectorAll(".catalog-item");
+
+            catalogItems.forEach(item => {
+                const title = item.querySelector("h3").textContent.toLowerCase();
+                const description = item.querySelector("p").textContent.toLowerCase();
+                const tags = Array.from(item.querySelectorAll(".tags span")).map(tag => tag.textContent.toLowerCase());
+
+                const isVisible = 
+                    title.includes(searchInput) || 
+                    description.includes(searchInput) || 
+                    tags.some(tag => tag.includes(searchInput));
+
+                item.style.display = isVisible ? "block" : "none";
+            });
+        }
+    </script>
 </body>
 </html>
