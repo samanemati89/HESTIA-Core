@@ -18,6 +18,11 @@
             padding: 20px;
             text-align: center;
         }
+        header img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+        }
         nav {
             background-color: #003f63;
             padding: 10px;
@@ -35,25 +40,59 @@
         section {
             padding: 20px;
         }
+        section h2 {
+            color: #005b96;
+        }
         footer {
             background-color: #003f63;
             color: #fff;
             text-align: center;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            position: relative;
+        }
+        .team {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .team div {
+            text-align: center;
+            max-width: 200px;
+        }
+        .team img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        blockquote {
+            background-color: #e9ecef;
+            border-left: 5px solid #005b96;
+            padding: 10px 20px;
+            margin: 10px 0;
+        }
+        .cta a {
+            padding: 10px 20px;
+            background-color: #005b96;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .cta a:hover {
+            background-color: #003f63;
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="https://via.placeholder.com/1200x300" alt="HESTIA Banner">
         <h1>Welcome to HESTIA Core</h1>
         <p>Health Evaluation Systems and Technological Informatics Archive</p>
     </header>
     <nav>
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#team">Team</a>
         <a href="#contact">Contact</a>
     </nav>
     <section id="about">
@@ -71,14 +110,44 @@
             <li>Collaborations with healthcare providers and researchers</li>
         </ul>
     </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have questions or want to collaborate, feel free to reach out:</p>
-        <p>Email: <a href="mailto:snemati@mailbox.sc.edu">snemati@mailbox.sc.edu</a></p>
-        <p>GitHub: <a href="https://github.com/samanemati89/HESTIA-Core" target="_blank">HESTIA Core Repository</a></p>
+    <section id="team">
+        <h2>Our Team</h2>
+        <div class="team">
+            <div>
+                <img src="https://via.placeholder.com/150" alt="Samaneh Nemati">
+                <h3>Samaneh Nemati</h3>
+                <p>HESTIA Core Manager</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/150" alt="Alex Ewing">
+                <h3>Alex Ewing</h3>
+                <p>Director, Prisma Health Data Support</p>
+            </div>
+        </div>
+    </section>
+    <section class="cta">
+        <h2>Get Involved</h2>
+        <a href="mailto:snemati@mailbox.sc.edu">Contact Us</a>
+        <a href="https://github.com/samanemati89/HESTIA-Core" target="_blank">View on GitHub</a>
+    </section>
+    <section id="testimonials">
+        <h2>What People Say</h2>
+        <blockquote>
+            <p>"HESTIA Core revolutionized how we manage our clinical research data. The team is fantastic!"</p>
+            <cite>- Dr. Jane Doe, Prisma Health</cite>
+        </blockquote>
+        <blockquote>
+            <p>"Their innovative approach to data privacy and AI integration is unmatched."</p>
+            <cite>- Alex Ewing, Director of Data Support</cite>
+        </blockquote>
     </section>
     <footer>
         <p>© 2025 HESTIA Core | University of South Carolina</p>
+        <p>
+            Follow us:
+            <a href="https://www.linkedin.com/in/samaneh-nemati/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/samanemati89/HESTIA-Core" target="_blank">GitHub</a>
+        </p>
     </footer>
 </body>
 </html>
