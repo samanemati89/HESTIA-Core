@@ -28,9 +28,10 @@ Explore the HESTIA Core website here:
 
 ## 📋 **How to Contribute**
 We welcome contributions!  
+<!-- 
 - 💡 Submit ideas or feature requests via the **Issues** tab.
 - 🛠️ Fork this repository and create a Pull Request with your improvements.
-
+-->
 ---
 
 ## 📫 **Contact Us**
