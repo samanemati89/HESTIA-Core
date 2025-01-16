@@ -140,6 +140,38 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #005b96;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #003f63;
+        }
     </style>
 </head>
 <body>
@@ -203,6 +235,30 @@
         </div>
     </div>
 </section>
+
+    <section id="dataset-request">
+    <h2>Request a Dataset</h2>
+    <p>Please fill out the form below to request access to a dataset. Our team will review your request and get back to you shortly.</p>
+    <form action="mailto:snemati@mailbox.sc.edu" method="post" enctype="text/plain">
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+
+        <label for="dataset">Dataset Name:</label><br>
+        <input type="text" id="dataset" name="dataset" placeholder="Name of the Dataset" required><br><br>
+
+        <label for="purpose">Purpose of Request:</label><br>
+        <textarea id="purpose" name="purpose" rows="4" cols="50" placeholder="Explain why you need this dataset..." required></textarea><br><br>
+
+        <label for="institution">Institution/Organization:</label><br>
+        <input type="text" id="institution" name="institution" placeholder="Your Institution/Organization" required><br><br>
+
+        <input type="submit" value="Submit Request">
+    </form>
+</section>
+
 
     
     <section id="team">
