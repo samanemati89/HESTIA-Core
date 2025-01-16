@@ -48,12 +48,12 @@
             color: #fff;
             text-align: center;
             padding: 10px;
-            position: relative;
         }
         .team {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
+            justify-content: center;
         }
         .team div {
             text-align: center;
@@ -77,6 +77,7 @@
             text-decoration: none;
             border-radius: 5px;
             margin: 5px;
+            display: inline-block;
         }
         .cta a:hover {
             background-color: #003f63;
@@ -140,38 +141,6 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
-        form {
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        label {
-            font-weight: bold;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="submit"] {
-            background-color: #005b96;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        input[type="submit"]:hover {
-            background-color: #003f63;
-        }
     </style>
 </head>
 <body>
@@ -190,123 +159,55 @@
     <section id="about">
         <h2>About HESTIA</h2>
         <p>HESTIA is a cutting-edge research initiative established by the University of South Carolina's Office of the Vice President for Research (VPR). Our mission is to leverage cutting-edge technology and data-driven insights to advance healthcare and improve outcomes for diverse populations.</p>
-        <p>By collaborating with healthcare providers, state agencies, health insurance providers, businesses, and other stakeholders, HESTIA enables secure, centralized databases that can be leveraged for research reliant on AI applications. These datasets span various fields, including health care, public health, business analytics, social sciences, and more, aiming to advance knowledge and improve outcomes for diverse populations.</p>
+        <p>By collaborating with healthcare providers, state agencies, health insurance providers, businesses, and other stakeholders, HESTIA enables secure, centralized databases that can be leveraged for research reliant on AI applications. These datasets span various fields, including health care, public health, business analytics, social sciences, and more.</p>
     </section>
     <section id="services">
         <h2>Our Services</h2>
         <ul>
-            <li>Acquiring and curating large datasets from health care providers, state agencies, and businesses</li>
-            <li>Creating secure and centralized databases of anonymized data</li>
-            <li>Disseminating large datasets related to health sciences to support research powered by AI and predictive modeling</li>
-            <li>Supporting projects in health care, public health, and social sciences</li>
-            <li>Ensuring compliance with data privacy regulations and ethical research practices</li>
+            <li>Acquiring and curating large datasets</li>
+            <li>Creating secure and centralized databases</li>
+            <li>Supporting AI and predictive modeling research</li>
+            <li>Ensuring data privacy and compliance</li>
+            <li>Collaborating with healthcare providers and researchers</li>
         </ul>
     </section>
-
-    
-    
     <section id="data-catalog">
-    <h2>Data Catalog</h2>
-    <input type="text" id="searchBar" placeholder="Search datasets..." onkeyup="filterCatalog()">
-    <div class="catalog-grid" id="catalogGrid">
-        <div class="catalog-item">
-            <img src="https://via.placeholder.com/300x200" alt="Dataset 1">
-            <h3>Dataset 1</h3>
-            <p>Here we should explain what this dataset is...</p>
-            <div class="tags">
-                <span>ABC</span>
-                <span>blah blah</span>
-                <span>Json</span>
-                <span>Nifti</span>
+        <h2>Data Catalog</h2>
+        <input type="text" id="searchBar" placeholder="Search datasets..." onkeyup="filterCatalog()">
+        <div class="catalog-grid" id="catalogGrid">
+            <div class="catalog-item">
+                <img src="https://via.placeholder.com/300x200" alt="Dataset 1">
+                <h3>Dataset 1</h3>
+                <p>A brief explanation about Dataset 1.</p>
+                <div class="tags">
+                    <span>AI</span>
+                    <span>Health</span>
+                    <span>Json</span>
+                </div>
+                <a href="request-form.html?dataset=Dataset%201" class="cta">Request Access</a>
             </div>
-            <a href="https://forms.gle/example-form" target="_blank" class="request-button">Request Access</a>
         </div>
-        <div class="catalog-item">
-            <img src="https://via.placeholder.com/300x200" alt="Dataset 2">
-            <h3>Dataset 2</h3>
-            <p>What this dataset is about...</p>
-            <div class="tags">
-                <span>MRI</span>
-                <span>raw</span>
-                <span>Nifti</span>
-                <span>Code</span>
-            </div>
-            <a href="https://forms.gle/example-form" target="_blank" class="request-button">Request Access</a>
-        </div>
-    </div>
-</section>
-
-    <section id="dataset-request">
-    <h2>Request a Dataset</h2>
-    <p>Please fill out the form below to request access to a dataset. Our team will review your request and get back to you shortly.</p>
-    <form action="mailto:snemati@mailbox.sc.edu" method="post" enctype="text/plain">
-        <label for="name">Full Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
-
-        <label for="email">Email Address:</label><br>
-        <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
-
-        <label for="dataset">Dataset Name:</label><br>
-        <input type="text" id="dataset" name="dataset" placeholder="Name of the Dataset" required><br><br>
-
-        <label for="purpose">Purpose of Request:</label><br>
-        <textarea id="purpose" name="purpose" rows="4" cols="50" placeholder="Explain why you need this dataset..." required></textarea><br><br>
-
-        <label for="institution">Institution/Organization:</label><br>
-        <input type="text" id="institution" name="institution" placeholder="Your Institution/Organization" required><br><br>
-
-        <input type="submit" value="Submit Request">
-    </form>
-</section>
-
-
-    
+    </section>
     <section id="team">
         <h2>Our Team</h2>
         <div class="team">
-            <div class="team-member">
-                <img src="https://github.com/samanemati89/HESTIA-Core/blob/main/thumbnail_IMG_2534.jpg">
+            <div>
+                <img src="https://via.placeholder.com/150" alt="Samaneh Nemati">
                 <h3>Samaneh Nemati</h3>
                 <p>HESTIA Core Manager</p>
             </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150">
-                <h3>Alex Ewing</h3>
-                <p>Director, Prisma Health Data Support</p>
-            </div>
         </div>
     </section>
-
-    <section class="cta">
-        <h2>Get Involved</h2>
-        <a href="mailto:snemati@mailbox.sc.edu">Contact Us</a>
-        <a href="https://github.com/samanemati89/HESTIA-Core" target="_blank">View on GitHub</a>
-    </section>
-    
     <footer>
         <p>© 2025 HESTIA Core | University of South Carolina</p>
-        <p>
-            Follow us:
-            <a href="https://www.linkedin.com/in/samaneh-nemati/" target="_blank" style="color: #0a66c2; font-weight: bold; text-decoration: none;">LinkedIn</a>|
-            <a href="https://github.com/samanemati89/HESTIA-Core" target="_blank" style="color: #0a66c2; font-weight: bold; text-decoration: none;">GitHub</a>
-        </p>
     </footer>
     <script>
         function filterCatalog() {
             const searchInput = document.getElementById("searchBar").value.toLowerCase();
-            const catalogItems = document.querySelectorAll(".catalog-item");
-
-            catalogItems.forEach(item => {
-                const title = item.querySelector("h3").textContent.toLowerCase();
-                const description = item.querySelector("p").textContent.toLowerCase();
-                const tags = Array.from(item.querySelectorAll(".tags span")).map(tag => tag.textContent.toLowerCase());
-
-                const isVisible = 
-                    title.includes(searchInput) || 
-                    description.includes(searchInput) || 
-                    tags.some(tag => tag.includes(searchInput));
-
-                item.style.display = isVisible ? "block" : "none";
+            const items = document.querySelectorAll(".catalog-item");
+            items.forEach(item => {
+                const content = item.textContent.toLowerCase();
+                item.style.display = content.includes(searchInput) ? "block" : "none";
             });
         }
     </script>
