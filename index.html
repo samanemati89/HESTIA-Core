@@ -49,27 +49,6 @@
             text-align: center;
             padding: 10px;
         }
-        .team {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .team div {
-            text-align: center;
-            max-width: 200px;
-        }
-        .team img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-        blockquote {
-            background-color: #e9ecef;
-            border-left: 5px solid #005b96;
-            padding: 10px 20px;
-            margin: 10px 0;
-        }
         .cta a {
             padding: 10px 20px;
             background-color: #005b96;
@@ -81,6 +60,32 @@
         }
         .cta a:hover {
             background-color: #003f63;
+        }
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .services ul li {
+            background: #e9f4ff;
+            border-left: 5px solid #005b96;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .team div {
+            text-align: center;
+            max-width: 200px;
+        }
+        .team img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
         }
         #data-catalog {
             padding: 20px;
@@ -150,25 +155,25 @@
         <p>Health Evaluation Systems and Technological Informatics Archive</p>
     </header>
     <nav>
-        <a href="#about">About</a>
+        <a href="#mission">Mission</a>
         <a href="#services">Services</a>
-        <a href="#team">Team</a>
         <a href="#data-catalog">Data Catalog</a>
+        <a href="#team">Team</a>
         <a href="#contact">Contact</a>
     </nav>
-    <section id="about">
-        <h2>About HESTIA</h2>
-        <p>HESTIA is a cutting-edge research initiative established by the University of South Carolina's Office of the Vice President for Research (VPR). Our mission is to leverage cutting-edge technology and data-driven insights to advance healthcare and improve outcomes for diverse populations.</p>
-        <p>By collaborating with healthcare providers, state agencies, health insurance providers, businesses, and other stakeholders, HESTIA enables secure, centralized databases that can be leveraged for research reliant on AI applications. These datasets span various fields, including health care, public health, business analytics, social sciences, and more.</p>
+    <section id="mission">
+        <h2>Our Mission</h2>
+        <p>
+            At HESTIA, our mission is to provide the research community with services that enhance clinical research data management, enable collaboration, and leverage advanced technologies like AI to foster discovery and improve health outcomes.
+        </p>
     </section>
-    <section id="services">
+    <section id="services" class="services">
         <h2>Our Services</h2>
         <ul>
-            <li>Acquiring and curating large datasets</li>
-            <li>Creating secure and centralized databases</li>
-            <li>Supporting AI and predictive modeling research</li>
-            <li>Ensuring data privacy and compliance</li>
-            <li>Collaborating with healthcare providers and researchers</li>
+            <li><strong>Data Science and AI Integration:</strong> Assistance with machine learning, predictive modeling, and advanced analytics to solve complex research problems.</li>
+            <li><strong>Data Management and Storage:</strong> Secure, centralized databases and support for the full data lifecycle, from acquisition to long-term storage.</li>
+            <li><strong>Computing Resources:</strong> Access to high-performance computing clusters, research software, and remote desktop environments for diverse research needs.</li>
+            <li><strong>Training and Consultation:</strong> Workshops, personalized consultations, and resources to build skills in data science and computational research.</li>
         </ul>
     </section>
     <section id="data-catalog">
@@ -185,46 +190,43 @@
                     <span>Json</span>
                 </div>
                 <a href="request-form.html?dataset=Dataset%201" class="cta">Request Access</a>
-                      </div>
-        <div class="catalog-item">
-            <img src="https://via.placeholder.com/300x200" alt="Dataset 2">
-            <h3>Dataset 2</h3>
-            <p>What this dataset is about...</p>
-            <div class="tags">
-                <span>MRI</span>
-                <span>raw</span>
-                <span>Nifti</span>
-                <span>Code</span>
             </div>
-              <a href="request-form.html?dataset=Dataset%201" class="cta">Request Access</a>
+            <div class="catalog-item">
+                <img src="https://via.placeholder.com/300x200" alt="Dataset 2">
+                <h3>Dataset 2</h3>
+                <p>What this dataset is about...</p>
+                <div class="tags">
+                    <span>MRI</span>
+                    <span>raw</span>
+                    <span>Nifti</span>
+                    <span>Code</span>
+                </div>
+                <a href="request-form.html?dataset=Dataset%202" class="cta">Request Access</a>
+            </div>
         </div>
-    </div>
     </section>
-    
     <section id="team">
-        <h2>Our Team</h2>
+        <h2>Meet Our Team</h2>
         <div class="team">
             <div>
                 <img src="https://via.placeholder.com/150" alt="Samaneh Nemati">
                 <h3>Samaneh Nemati</h3>
                 <p>HESTIA Core Manager</p>
             </div>
+            <div>
+                <img src="https://via.placeholder.com/150" alt="Alex Ewing">
+                <h3>Alex Ewing</h3>
+                <p>Director, Prisma Health Data Support</p>
+            </div>
         </div>
     </section>
-
-    <section class="cta">
-        <h2>Get Involved</h2>
-        <a href="mailto:snemati@mailbox.sc.edu">Contact Us</a>
-        <a href="https://github.com/samanemati89/HESTIA-Core" target="_blank">View on GitHub</a>
-    </section>
-    
     <footer>
         <p>© 2025 HESTIA Core | University of South Carolina</p>
         <p>
             Follow us:
-            <a href="https://www.linkedin.com/in/samaneh-nemati/" target="_blank" style="color: #0a66c2; font-weight: bold; text-decoration: none;">LinkedIn</a>|
+            <a href="https://www.linkedin.com/in/samaneh-nemati/" target="_blank" style="color: #0a66c2; font-weight: bold; text-decoration: none;">LinkedIn</a> |
             <a href="https://github.com/samanemati89/HESTIA-Core" target="_blank" style="color: #0a66c2; font-weight: bold; text-decoration: none;">GitHub</a>
-        </p>   
+        </p>
     </footer>
     <script>
         function filterCatalog() {
