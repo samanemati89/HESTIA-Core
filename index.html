@@ -2,93 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HESTIA Data Request Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      background-color: #f9f9f9;
     }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
+    h1 {
+      text-align: center;
+    }
+    form {
       background: white;
-      padding: 20px 30px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     }
-    h1, h2 {
-      color: #800000;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    .highlight-box {
-      background-color: #f1f1f1;
-      padding: 15px;
-      border-left: 5px solid #800000;
-      margin-bottom: 20px;
-    }
-    a {
-      color: #800000;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .button {
-      display: inline-block;
+    label {
+      display: block;
       margin-top: 15px;
-      padding: 10px 15px;
-      background-color: #800000;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #003366;
       color: white;
+      padding: 12px 20px;
       border: none;
-      border-radius: 4px;
-      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0055a5;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>HESTIA Data Request Form</h1>
-    <p>The <strong>Healthcare Evaluation Systems and Technological Informatics Archive (HESTIA)</strong> provides a secure research environment for analyzing health-related data from Prisma Health, the VA, and Medicaid. This form is for USC faculty and collaborators to request access to de-identified clinical datasets.</p>
 
-    <div class="highlight-box">
-      <strong>🔒 What to Expect</strong>
-      <ol>
-        <li>Submit HESTIA Data Request Form</li>
-        <li>Consultation (if needed) with HESTIA Core</li>
-        <li>Upload protocol and IRB documentation</li>
-        <li>HESTIA and data governance review</li>
-        <li>Sign Data Use Agreement (DUA)</li>
-        <li>Access to secure HESTIA environment</li>
-      </ol>
-    </div>
+<h1>HESTIA Data Request Form</h1>
 
-    <h2>Request Requirements</h2>
-    <ul>
-      <li>Requester must be USC faculty or approved investigator</li>
-      <li>IRB approval or pending documentation is required</li>
-      <li>All research must be conducted within the HESTIA environment (no raw data download)</li>
-    </ul>
+<form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
 
-    <h2>Required Information</h2>
-    <ul>
-      <li>Principal Investigator & project contact info</li>
-      <li>Title and funding source (if any)</li>
-      <li>Study population and inclusion/exclusion criteria</li>
-      <li>Requested data domains (e.g., demographics, diagnoses, labs, imaging reports)</li>
-      <li>Date ranges and Prisma site(s)</li>
-      <li>Data codes used (ICD-10, CPT, LOINC, RxNorm, etc.)</li>
-      <li>Plans for linking to other datasets (if any)</li>
-    </ul>
+  <label for="name">Full Name:</label>
+  <input type="text" name="Name" id="name" required />
 
-    <p>If you have questions, please contact <a href="mailto:snemati@mailbox.sc.edu">snemati@mailbox.sc.edu</a></p>
+  <label for="email">Email Address:</label>
+  <input type="email" name="Email" id="email" required />
 
-    <a class="button" href="#">➡ Launch HESTIA Data Request Form</a>
-  </div>
+  <label for="usc">Are you a USC Faculty/Staff?</label>
+  <select name="USC Affiliation" id="usc" required>
+    <option value="">-- Please choose --</option>
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+
+  <label for="irb">IRB Protocol # or Status:</label>
+  <input type="text" name="IRB Protocol" id="irb" required />
+
+  <label for="population">Target Population Description:</label>
+  <textarea name="Target Population" id="population" rows="4" required></textarea>
+
+  <label for="elements">Requested Data Elements (e.g., diagnosis, procedures, meds):</label>
+  <textarea name="Requested Data Elements" id="elements" rows="4" required></textarea>
+
+  <label for="demographics">Do you need any demographic data?</label>
+  <select name="Demographic Data Needed" id="demographics" required>
+    <option value="">-- Please choose --</option>
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+
+  <label for="demoDetail">If yes, please specify which demographic data is needed:</label>
+  <textarea name="Demographic Data Details" id="demoDetail" rows="3"></textarea>
+
+  <label for="protocol">Link to IRB Protocol or File Upload (Dropbox/Drive link):</label>
+  <input type="text" name="IRB Protocol Link" id="protocol" required />
+
+  <label for="notes">Any other notes or information:</label>
+  <textarea name="Additional Notes" id="notes" rows="4"></textarea>
+
+  <!-- Redirect after submit (optional) -->
+  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+  <!-- Prevent spam -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit">Submit Request</button>
+
+</form>
+
 </body>
 </html>
