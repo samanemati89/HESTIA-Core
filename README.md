@@ -11,15 +11,15 @@ The **Healthcare Evaluation Systems and Technological Informatics Archive (HESTI
 3. Upload protocol and IRB documentation  
 4. HESTIA and data governance review  
 5. Sign Data Use Agreement (DUA)  
-6. Access to secure HESTIA environment  
+6. Access to de-identified data on HESTIA HPC system  
 
 ---
 
 ## ✅ Request Requirements
 
 - Requester must be USC faculty or approved investigator  
-- IRB approval or pending documentation is required  
-- All research must be conducted within the HESTIA environment (no raw data download)  
+- IRB approval is required  
+- No raw data can be downloaded  
 
 ---
 
@@ -28,10 +28,7 @@ The **Healthcare Evaluation Systems and Technological Informatics Archive (HESTI
 - Principal Investigator & project contact info  
 - Title and funding source (if any)  
 - Study population and inclusion/exclusion criteria  
-- Requested data domains (e.g., demographics, diagnoses, labs, imaging reports)  
-- Date ranges and Prisma site(s)  
-- Data codes used (ICD-10, CPT, LOINC, RxNorm, etc.)  
-- Plans for linking to other datasets (if any)  
+- Requested data domains (e.g., demographics, diagnoses, labs, imaging reports)    
 
 ---
 
