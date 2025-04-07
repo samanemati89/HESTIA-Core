@@ -1,309 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HESTIA Core</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #005b96;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        header img {
-            width: 100%;
-            height: auto;
-            max-height: 300px;
-        }
-        nav {
-            background-color: #003f63;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 20px;
-        }
-        section h2 {
-            color: #005b96;
-        }
-        footer {
-            background-color: #003f63;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-        .cta a {
-            padding: 10px 20px;
-            background-color: #005b96;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 5px;
-            display: inline-block;
-        }
-        .cta a:hover {
-            background-color: #003f63;
-        }
-        .services ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .services ul li {
-            background: #e9f4ff;
-            border-left: 5px solid #005b96;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-        .team {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .team div {
-            text-align: center;
-            max-width: 200px;
-        }
-        .team img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-        #data-catalog {
-            padding: 20px;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-        #data-catalog h2 {
-            color: #005b96;
-            margin-bottom: 20px;
-        }
-        .catalog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 10px;
-        }
-        .catalog-item {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        .catalog-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .catalog-item h3 {
-            font-size: 1.2em;
-            margin-top: 10px;
-            color: #333;
-        }
-        .catalog-item p {
-            font-size: 0.9em;
-            color: #666;
-        }
-        .tags {
-            margin-top: 10px;
-        }
-        .tags span {
-            display: inline-block;
-            background: #005b96;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.8em;
-            margin: 2px;
-        }
-        #searchBar {
-            width: 100%;
-            max-width: 600px;
-            padding: 15px;
-            font-size: 1em;
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HESTIA Data Request Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px 30px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      color: #800000;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .highlight-box {
+      background-color: #f1f1f1;
+      padding: 15px;
+      border-left: 5px solid #800000;
+      margin-bottom: 20px;
+    }
+    a {
+      color: #800000;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #800000;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="https://via.placeholder.com/1200x300" alt="HESTIA Banner">
-        <h1>Welcome to HESTIA Core</h1>
-        <p>Health Evaluation Systems and Technological Informatics Archive</p>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#data-catalog">Data Catalog</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="about">
-        <h2>About HESTIA</h2>
-        <p>
-            At HESTIA, our mission is to provide the research community with services that enhance clinical research data management, enable collaboration, and leverage advanced technologies like AI to foster discovery and improve health outcomes.
-        </p>
-    </section>
-    <section id="services" class="services">
-    <h2>Our Services</h2>
-    <ol>
-        <!--
-        <li>
-            <strong>Data Science, Statistics, and AI Integration</strong>
-            <p>
-                HESTIA supports researchers in exploring and leveraging the power of data science, statistical modeling, machine learning, and AI techniques to address complex challenges. 
-                We assist with processing and analyzing diverse types of data, from medical images to public health metrics and genomic datasets. Our team provides guidance 
-                on predictive modeling, advanced algorithms, and research-driven AI applications.
-            </p>
-        </li>
-        -->
-        <li>
-            <strong>Data Management and Secure Storage</strong>
-            <p>
-                We offer end-to-end support for managing the data lifecycle. HESTIA enables secure, centralized data storage solutions and anonymized data sharing, 
-                ensuring compliance with privacy regulations like HIPAA. From data acquisition and curation to dissemination and long-term archiving, we assist researchers 
-                in maintaining high standards of data integrity and usability.
-            </p>
-            <p>
-                Key services include:
-            </p>
-            <ul>
-                <!-- <li>Guidance on data collection, cleaning, and anonymization.</li> -->
-                <li>Centralized databases for collaborative research.</li>
-                <li>Secure storage solutions optimized for healthcare and public health data.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Computing and Software Resources</strong>
-            <p>
-                HESTIA provides robust computing resources to support diverse research needs. Our offerings include:
-            </p>
-            <ul>
-                <li>High-performance computing clusters for large-scale data processing.</li>
-                <!-- <li>Remote desktop environments for easy access to computational tools.</li> -->
-                <!-- <li>Research software tailored to health informatics, such as Python, R, and specialized imaging tools.</li> -->
-                <li>These resources are available to USC faculty and researchers with discounted prices.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Training and Consultation</strong>
-            <p>
-                HESTIA is committed to fostering a collaborative learning environment where researchers can expand their computational and data management skills. Our training 
-                and consultation services include:
-            </p>
-            <ul>
-                <li>Regular workshops to help you learn new skills and use our services effectively.</li>
-                <li>Access to online tutorials and guides for HESTIA tools and workflows.</li> 
-                <li>Personalized consultations to support your work with research data.</li>
-            </ul>
-        </li>
-    </ol>
-    </section>
-    <section id="data-catalog">
-        <h2>Data Catalog</h2>
-        <input type="text" id="searchBar" placeholder="Search datasets..." onkeyup="filterCatalog()">
-        <div class="catalog-grid" id="catalogGrid">
-            <div class="catalog-item">
-                <img src="https://via.placeholder.com/300x200" alt="Dataset 1">
-                <h3>Dataset 1</h3>
-                <p>A brief explanation about Dataset 1.</p>
-                <div class="tags">
-                    <span>AI</span>
-                    <span>Health</span>
-                    <span>Json</span>
-                </div>
-                <a href="request-form.html?dataset=Dataset%201" class="cta">Request Access</a>
-            </div>
-            <div class="catalog-item">
-                <img src="https://via.placeholder.com/300x200" alt="Dataset 2">
-                <h3>Dataset 2</h3>
-                <p>What this dataset is about...</p>
-                <div class="tags">
-                    <span>MRI</span>
-                    <span>raw</span>
-                    <span>Nifti</span>
-                    <span>Code</span>
-                </div>
-                <a href="request-form.html?dataset=Dataset%202" class="cta">Request Access</a>
-            </div>
-        </div>
-    </section>
-    <section id="team">
-        <h2>Meet Our Team</h2>
-    <p>
-        Our dedicated team of experts includes data scientists, researchers, and healthcare data managers, all working together to ensure the success of your research projects. Collaboration and innovation are at the heart of what we do.
-    </p>
-    <div class="team">
-        <div class="team-member">
-            <img src="https://github.com/samanemati89/HESTIA-Core/blob/main/thumbnail_IMG_2534.jpg" alt="Samaneh Nemati">
-            <h3>Samaneh Nemati</h3>
-            <p>HESTIA Core Manager</p>
-        </div>
-        <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Alex Ewing">
-            <h3>Alex Ewing</h3>
-            <p>Director, Prisma Health Data Support</p>
-        </div>
-        <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="John Doe">
-            <h3>John Doe</h3>
-            <p>Research Computing Specialist</p>
-        </div>
-        <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Jane Smith">
-            <h3>Jane Smith</h3>
-            <p>Data Scientist</p>
-        </div>
+  <div class="container">
+    <h1>HESTIA Data Request Form</h1>
+    <p>The <strong>Healthcare Evaluation Systems and Technological Informatics Archive (HESTIA)</strong> provides a secure research environment for analyzing health-related data from Prisma Health, the VA, and Medicaid. This form is for USC faculty and collaborators to request access to de-identified clinical datasets.</p>
+
+    <div class="highlight-box">
+      <strong>🔒 What to Expect</strong>
+      <ol>
+        <li>Submit HESTIA Data Request Form</li>
+        <li>Consultation (if needed) with HESTIA Core</li>
+        <li>Upload protocol and IRB documentation</li>
+        <li>HESTIA and data governance review</li>
+        <li>Sign Data Use Agreement (DUA)</li>
+        <li>Access to secure HESTIA environment</li>
+      </ol>
     </div>
-    </section>
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>If you have any questions or need more information about HESTIA, please don’t hesitate to reach out to us. We are here to support your research needs.</p>
-    <div class="cta">
-        <a href="mailto:snemati@mailbox.sc.edu">Email Us</a>
-        <a href="https://github.com/samanemati89/HESTIA-Core" target="_blank">Visit Our GitHub</a>
-    </div>
-</section>    
-    <footer>
-        <p>© 2025 HESTIA Core | University of South Carolina</p>
-        <p>
-            Follow us:
-            <a href="https://www.linkedin.com/in/samaneh-nemati/" target="_blank" style="color: #0a66c2; font-weight: bold; text-decoration: none;">LinkedIn</a> |
-            <a href="https://github.com/samanemati89/HESTIA-Core" target="_blank" style="color: #0a66c2; font-weight: bold; text-decoration: none;">GitHub</a>
-        </p>
-    </footer>
-    <script>
-        function filterCatalog() {
-            const searchInput = document.getElementById("searchBar").value.toLowerCase();
-            const items = document.querySelectorAll(".catalog-item");
-            items.forEach(item => {
-                const content = item.textContent.toLowerCase();
-                item.style.display = content.includes(searchInput) ? "block" : "none";
-            });
-        }
-    </script>
+
+    <h2>Request Requirements</h2>
+    <ul>
+      <li>Requester must be USC faculty or approved investigator</li>
+      <li>IRB approval or pending documentation is required</li>
+      <li>All research must be conducted within the HESTIA environment (no raw data download)</li>
+    </ul>
+
+    <h2>Required Information</h2>
+    <ul>
+      <li>Principal Investigator & project contact info</li>
+      <li>Title and funding source (if any)</li>
+      <li>Study population and inclusion/exclusion criteria</li>
+      <li>Requested data domains (e.g., demographics, diagnoses, labs, imaging reports)</li>
+      <li>Date ranges and Prisma site(s)</li>
+      <li>Data codes used (ICD-10, CPT, LOINC, RxNorm, etc.)</li>
+      <li>Plans for linking to other datasets (if any)</li>
+    </ul>
+
+    <p>If you have questions, please contact <a href="mailto:snemati@mailbox.sc.edu">snemati@mailbox.sc.edu</a></p>
+
+    <a class="button" href="#">➡ Launch HESTIA Data Request Form</a>
+  </div>
 </body>
 </html>
